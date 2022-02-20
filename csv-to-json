@@ -1,0 +1,10 @@
+$p = Import-Csv -Path .\test.csv
+
+$p.ip | ConvertTo-Json
+
+$jsonbody = @{
+
+    "ip_addresses" = @($p.ip)
+}
+
+$jsonbody | ConvertTo-Json

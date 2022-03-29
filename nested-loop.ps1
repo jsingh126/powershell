@@ -14,3 +14,10 @@ foreach ($child in (get-childitem -Directory)){
 }
 
 Write-Host $alldir
+
+
+Function Get-Properties ($array) {                                
+      $array |ForEach-Object{$_ | Get-Member |Where-Object{$_.MemberType -ne "Method"} | Select-Object -ExpandProperty Name} | Sort-Object -Unique
+    }
+
+    $finalalldir = $alldir | select -Property (get-properties $alldir) 

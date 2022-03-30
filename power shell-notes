@@ -1,0 +1,3 @@
+## Installing the dns client
+Install-Module -Name DnsClient-PS
+

@@ -26,3 +26,5 @@ foreach ($vm in $vms) {
             }
             
             return $FinalResult | ft
+
+$FinalResult  | Export-Csv DnsRecord.csv -NoTypeInformation

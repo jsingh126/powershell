@@ -9,3 +9,6 @@ $r = $($output = Test-Connection esx1.mylab.local) 2>&1
 
 # generate csv data
 https://www.convertcsv.com/generate-test-data.htm
+
+# Get the time in current zone 
+$(((get-date)).ToString("yyyyMMddTHHmmssZ"))

@@ -12,3 +12,8 @@ https://www.convertcsv.com/generate-test-data.htm
 
 # Get the time in current zone 
 $(((get-date)).ToString("yyyyMMddTHHmmssZ"))
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
